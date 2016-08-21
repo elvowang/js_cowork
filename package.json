@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "run-index": "node ./index.js",
+    "start": "node ./index.js",
+    "jasmine": "jasmine"
+  },
+  "dependencies":{
+    "jasmine": "2.4.1"
+  }
+}
