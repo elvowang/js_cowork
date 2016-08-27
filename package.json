@@ -5,6 +5,7 @@
     "jasmine": "jasmine"
   },
   "dependencies":{
-    "jasmine": "2.4.1"
+    "jasmine": "2.4.1",
+    "express": "4.14.0"
   }
 }

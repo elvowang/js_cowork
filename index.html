@@ -1,8 +1,51 @@
 <html>
   <head>
+    <style>
+      .book1 { background-color: red; }
+      .book2{background-color: green;}
+    </style>
   </head>
   <body>
     Hello World!
-    <div></div>
+    <div>
+      <ul>
+      </ul>
+    </div>
   </body>
+  <script>
+    var bookList = [{name: "The secret of pets",
+                    author: "Elvo" },
+                  {name: "The Jungle book",
+                   author: "Nano"},
+                   {name: "The Jungle book",
+                    author: "Nano"},
+                    {name: "The Jungle book",
+                     author: "Nano"}
+                   ,{name: "The Jungle book",
+                    author: "Nano"},
+                    {name: "The Jungle book",
+                     author: "Nano"}];
+
+     var createText = function(content) {
+        var text = document.createElement('span');
+        text.textContent = content;
+        return text;
+     }
+
+     var createBookItem = function(name, author) {
+       var book =  document.createElement('li');
+       var bookName = createText(name);
+       var bookAuthor = createText(author);
+
+       book.appendChild(bookName);
+       book.appendChild(bookAuthor);
+
+       document.querySelector("ul").appendChild(book);
+     }
+
+     bookList.forEach(function (element, index, array) {
+       createBookItem(element.name, element.author);
+     });
+
+  </script>
 </html>
